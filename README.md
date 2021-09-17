@@ -4,6 +4,10 @@
 * This repository represents "Customer management system using Django ".
 * With the help of this project we can allow the admin and customers to manage their orders and account settings.
 
+
+## Admin page
+[<img src="{% static 'images/Capture1.JPG' %}">]
+
 ## Requirements
 1. asgiref==3.4.1
 2. Django==3.2.6
