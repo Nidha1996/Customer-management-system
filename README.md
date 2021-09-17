@@ -5,8 +5,8 @@
 * With the help of this project we can allow the admin and customers to manage their orders and account settings.
 
 ## Requirements
-**asgiref:**3.4.1
-Django==3.2.6
+** asgiref:** 3.4.1
+** Django:** 3.2.6
 django-filter==2.4.0
 django-widget-tweaks==1.4.8
 gunicorn==20.1.0
