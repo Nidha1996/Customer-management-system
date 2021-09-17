@@ -6,7 +6,7 @@
 
 
 ## Admin page
-[<img src="{% static 'images/Capture1.JPG' %}" alt="HTML5">]
+![alt text](https://github.com/Nidha1996/Customer-management-system/blob/master/Capture1.JPG?raw=true)
 
 ## Requirements
 1. asgiref==3.4.1
