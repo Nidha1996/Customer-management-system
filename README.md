@@ -6,7 +6,8 @@
 
 
 ## Admin page
-![alt text](https://github.com/Nidha1996/Customer-management-system/blob/master/Capture1.JPG?raw=true)
+<!-- ![alt text](https://github.com/Nidha1996/Customer-management-system/blob/master/Capture1.JPG?raw=true) -->
+![alt text](http://url/to/Capture1.JPG)
 
 ## Requirements
 1. asgiref==3.4.1
