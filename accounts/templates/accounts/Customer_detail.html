@@ -1,0 +1,80 @@
+{% extends 'accounts/basic.html' %}
+{% block content %}
+{% load widget_tweaks %}
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="card card-body m-4">
+                    <h5>Customer:</h5>
+                    <hr>
+                    <a href="{% url 'Orderupdate' cust.id %}" class="btn btn-outline-primary m-1">Update Customer</a>
+                    <a href="{% url 'Createorder' cust.id %}" class="btn btn-outline-primary m-1">Place Order</a>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-body m-4">
+                    <h5>Contact Information:</h5>
+                    <hr>
+                    <div class="m-2">
+                        <p>Email: {{cust.email}}</p>
+                        <p>Phone: {{cust.phone}}</p>
+                    </div>    
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="card card-body m-4">
+                    <h5>Total Orders</h5>
+                    <hr>
+                    <div class="m-3 text-center">
+                        <h2>{{cust.order_set.all.count}}</h2>
+                    </div>    
+                </div>
+            </div>
+        </div>
+
+         <!-- Search Process -->
+        
+        <div class="row">
+            <div class="col">
+                <div class="card card-body m-4">
+                    <form  method="GET">
+                        {% csrf_token %}
+                        {% for field in myfilters.form %}
+                        {{field.label}}
+                        {{field|add_class:'form-control-sm'}}
+                        {% endfor %}
+                            <button type="submit" class="btn btn-sm btn-primary">Search</button>
+                    </form>
+                </div>      
+            </div>      
+        </div> 
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="card card-body m-4">
+                    <table class="table">
+                        <tr>
+                            <th>Product</th>
+                            <th>Note</th>
+                            <th>Data Ordered</th>
+                            <th>Status</th>
+                            <th>Update</th>
+                            <th>Remove</th>
+                        </tr>
+                        {% for data in orders %} 
+                        <tr>
+                            <td>{{data.product}}</td>
+                            <td>{{data.note}}</td>
+                            <td>{{data.data_created}}</td>
+                            <td>{{data.status}}</td>
+                            <td><a href="{% url 'Orderupdate' data.pk %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                            <td><a href="{% url 'Deleteorder' data.pk %}" class="btn btn-sm btn-outline-danger">Remove</a></td>
+                        </tr>  
+                        {% endfor %} 
+                        </table>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+{% endblock  %}
+   

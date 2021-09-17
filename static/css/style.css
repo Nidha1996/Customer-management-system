@@ -1,0 +1,12 @@
+body{
+    background-color: #ebeff5;
+}
+#totalorder{
+    background-color:#4cb4c7;
+}
+#orderdeliver{
+    background-color:#7abecc;
+}
+#orderpending{
+    background-color:#7CD1C0;
+}

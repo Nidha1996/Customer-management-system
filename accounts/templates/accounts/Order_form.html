@@ -1,0 +1,22 @@
+{% extends 'accounts/basic.html' %}
+{% block content %}
+<div class="container-fluid" style="height:100vh;" >
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card card-body">
+                <h5 class="p-2">CREATE NEW ORDER</h5>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                        {{form.management_form}}
+                        {% for form in form %}
+                            {{form}}
+                            <hr>
+                        {% endfor %}    
+                        <input class="btn btn-primary" type="submit" value="Save">
+                </form>
+            </div>    
+        </div>
+    </div>
+</div>          
+{% endblock  %}
+    

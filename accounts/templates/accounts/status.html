@@ -1,0 +1,36 @@
+{% block content %}
+<div class="container-fluid">
+    <div class="row p-3 text-center text-white mt-3">
+        <div class="col-md-4 pe-4">
+            <div class="card" id="totalorder">
+                  <div class="card-header p-3">
+                      <h5>Total orders</h5>
+                  </div>  
+                  <div class="number p-4">
+                      <h5>{{totalorder}}</h5>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4  pe-4">
+            <div class="card" id="orderdeliver">
+                  <div class="card-header p-3">
+                      <h5>Orders Delivered</h5>
+                  </div>  
+                  <div class="number p-4">
+                      <h5>{{deliveredorder}}</h5>
+                  </div>
+            </div>
+        </div>
+        <div class="col-md-4  pe-4">
+            <div class="card" id="orderpending">
+                  <div class="card-header p-3">
+                      <h5>Orders Pending</h5>
+                  </div>  
+                  <div class="number p-4">
+                      <h5>{{pendingorder}}</h5>
+                  </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

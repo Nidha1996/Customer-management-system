@@ -1,0 +1,21 @@
+{% extends 'accounts/basic.html' %}
+{%block content %}
+<div class="container-fluid" style="height:100vh;" >
+    <div class="row">
+        <div class="col-lg-6 text-center">
+            <div class="card ">
+                <h5 class="p-2">CREATE NEW CUSTOMER</h5>
+                <form action="" method="POST">
+                    {% csrf_token %}
+                    <table  cellpadding="20"  >
+                        {{form.as_table}}
+                        <tr>
+                            <td colspan="2"><input class="btn btn-sm btn-outline-primary" type="submit" value="Save"></td>
+                        </tr>
+                    </table>  
+                </form>
+            </div>    
+        </div>
+    </div>
+</div>            
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends 'accounts/basic.html' %}
+{% block content %}
+{% load static %}
+{% include 'accounts/status.html' %}
+<div class="container-fluid">
+    <div class="row mt-5">
+        <div class="col-md-5">
+            <h5>CUSTOMERS:</h5>
+            <hr>
+            <div class="card card-body">
+                <!-- <a href="{% url 'Createcustomer' %}" class="btn btn-sm btn-outline-primary m-1">Create Customer</a> -->
+                <table class="table table-sm">
+                    <tr>
+                        <th></th>
+                        <th>Customer</th>
+                        <th>Phone</th>
+                    </tr>
+                    {% for data in customer %}
+                    <tr>
+                        <td><a href="{% url 'customerdetails' data.pk %}" class="btn btn-sm btn-outline-primary">View</a></td>
+                        <td>{{data.name}}</td>
+                        <td>{{data.phone}}</td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+        <div class="col-md-7">
+            <h5>LAST 5 ORDERS</h5>
+            <hr>
+            <div class="card card-body">
+                <table class="table table-sm">
+                    <tr>
+                        <th>Product</th>
+                        <th>Date Ordered</th>
+                        <th>Status</th>
+                        <th>Update</th>
+                        <th>Remove</th>
+                    </tr>
+                    {% for data in orders %}
+                    <tr>
+                        <td>{{data.product}}</td>
+                        <td>{{data.data_created}}</td>
+                        <td>{{data.status}}</td>
+                        <td><a href="{% url 'Orderupdate' data.id %}" class="btn btn-sm btn-outline-success">Update</a></td>
+                        <td><a href="{% url 'Deleteorder' data.id %}" class="btn btn-sm btn-outline-danger">Remove</a></td>
+                    </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
