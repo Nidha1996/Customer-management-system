@@ -6,7 +6,7 @@
 
 
 ## Admin page
-[<img src="{% static 'images/Capture1.JPG' %}">]
+[<img src="{% static 'images/Capture1.JPG' %}" alt="HTML5">]
 
 ## Requirements
 1. asgiref==3.4.1
