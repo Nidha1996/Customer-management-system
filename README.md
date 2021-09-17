@@ -5,9 +5,6 @@
 * With the help of this project we can allow the admin and customers to manage their orders and account settings.
 
 
-## Admin page
-<!-- ![alt text](https://github.com/Nidha1996/Customer-management-system/blob/master/Capture1.JPG?raw=true) -->
-![alt text](http://url/to/Capture1.JPG)
 
 ## Requirements
 1. asgiref==3.4.1
